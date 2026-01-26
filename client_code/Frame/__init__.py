@@ -24,16 +24,16 @@ class Frame(FrameTemplate):
     self.sales_page_link.background = app.theme_colors['Primary Container']
     
 
-  def sales_page_link_click(self, **event_args):
+  def historico_geral_click(self, **event_args):
     """This method is called when the link is clicked"""
-    #Clear the content panel and add the Sales Form
+    #Clear the content panel and add the wanted Form
     self.content_panel.clear()
-    self.content_panel.add_component(Sales())
+    self.content_panel.add_component(Historicos())
     #Change the color of the sales_page_link to indicate that the Sales page has been selected
     self.sales_page_link.background = app.theme_colors['Primary Container']
     self.reports_page_link.background = "transparent"
 
-  def reports_page_link_click(self, **event_args):
+  def graficos_gerais_click(self, **event_args):
     """This method is called when the link is clicked"""
     #Clear the content panel and add the Reports Form
     self.content_panel.clear()

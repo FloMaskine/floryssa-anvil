@@ -104,9 +104,7 @@ components:
     name: valores_atuais_contas
     properties: {col_widths: '{}', role: card}
     type: ColumnPanel
-  layout_properties:
-    col_widths: {}
-    grid_position: ODOKZJ,JPHMQN
+  layout_properties: {grid_position: 'ROBNBO,CDKQCY'}
   name: column_panel_1
   properties: {background: '', border: '', col_spacing: medium, col_widths: '{"XJDGPO":30,"QWVFNP":30}', foreground: '', role: null, spacing_above: none, spacing_below: none, tooltip: '', visible: true, wrap_on: mobile}
   type: ColumnPanel
