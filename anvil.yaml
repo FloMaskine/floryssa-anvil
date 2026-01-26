@@ -1,21 +1,32 @@
 allow_embedding: false
 correct_dependency_ids: {}
 db_schema:
-  files:
+  expenses:
     client: none
     columns:
     - admin_ui: {order: 0, width: 200}
-      name: filename
+      name: item-id
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: name
       type: string
     - admin_ui: {order: 2, width: 200}
-      name: author
-      target: users
-      type: link_single
+      name: category
+      type: string
     - admin_ui: {order: 3, width: 200}
-      name: created
-      type: datetime
+      name: value
+      type: number
+    - admin_ui: {order: 4, width: 200}
+      name: date
+      type: date
+    - admin_ui: {order: 5, width: 200}
+      name: paid
+      type: bool
+    - admin_ui: {order: 6, width: 200}
+      name: related-expenses
+      type: string
     server: full
-    title: Files
+    title: expenses
   users:
     client: none
     columns:
@@ -46,9 +57,10 @@ db_schema:
     server: full
     title: Users
 dependencies: []
-name: Dashboard Template A
+metadata: {title: Floryssa}
+name: Floryssa
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">'}
-package_name: Dashboard_Template_A
+package_name: Floryssa
 runtime_options:
   client_version: '3'
   preview_v3: true
