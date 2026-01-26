@@ -1,37 +1,43 @@
 components:
+- layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
 - components:
   - layout_properties: {grid_position: 'LLNAAG,BRSXTM'}
     name: spacer_1
     properties: {height: 32}
     type: Spacer
-  - event_bindings: {click: historico_geral_click}
+  - event_bindings: {click: historico_geral_menu_link_click}
     layout_properties: {grid_position: 'ATKKKJ,DBSYGY'}
-    name: historico_geral
+    name: historico_geral_menu_link
     properties: {align: right, background: '', bold: false, border: '', enabled: true, font: '', font_size: 18, foreground: '', icon: 'fa:history', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Histórico Geral, tooltip: '', underline: false, visible: true}
     type: Button
-  - event_bindings: {click: graficos_gerais_click}
-    layout_properties: {grid_position: 'AODCYE,XQMJOX'}
-    name: graficos_gerais
-    properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: 18, foreground: '', icon: 'fa:pie-chart', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: ' Reports', tooltip: '', underline: false, visible: true}
+  - data_bindings: []
+    event_bindings: {click: graficos_gerais_menu_link_click}
+    layout_properties: {grid_position: 'APKWHL,KLMGTF'}
+    name: graficos_gerais_menu_link
+    properties: {align: right, background: '', bold: false, border: '', enabled: true, font: '', font_size: 18, foreground: '', icon: 'fa:clipboard', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Gráficos & Relatórios, tooltip: '', underline: false, visible: true}
     type: Button
-  - layout_properties: {grid_position: 'KHSNGK,VNCASN'}
+  - layout_properties: {grid_position: 'IBBSAL,AFEUYU'}
+    name: clinica_menu_link
+    properties: {align: right, text: button_1}
+    type: Button
+  - layout_properties: {grid_position: 'SDSOHE,HMOHJD'}
     name: label_1
     properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '                                                                                 ', tooltip: '', underline: false, visible: true}
     type: Label
   - event_bindings: {click: signout_link_click}
-    layout_properties: {grid_position: 'QDWBQK,DOAOHZ'}
+    layout_properties: {grid_position: 'LDACBJ,WLLVSP'}
     name: signout_link
     properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Primary', icon: 'fa:sign-out', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Sign out, tooltip: '', underline: false, visible: true}
     type: Button
-  layout_properties: {slot: left-nav}
+  layout_properties: {slot: logo}
   name: column_panel_2
   properties: {col_widths: '{}'}
   type: ColumnPanel
-- layout_properties: {slot: default}
-  name: content_panel
-  properties: {}
-  type: ColumnPanel
 container:
+  data_bindings: []
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
 is_package: true
