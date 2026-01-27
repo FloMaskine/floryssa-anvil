@@ -1,5 +1,10 @@
 components:
-- layout_properties: {slot: default}
+- components:
+  - layout_properties: {grid_position: 'ZEJVMM,RVWNQV'}
+    name: button_1
+    properties: {text: button_1}
+    type: Button
+  layout_properties: {slot: default}
   name: content_panel
   properties: {}
   type: ColumnPanel
@@ -11,17 +16,22 @@ components:
   - event_bindings: {click: historico_geral_menu_link_click}
     layout_properties: {grid_position: 'ATKKKJ,DBSYGY'}
     name: historico_geral_menu_link
-    properties: {align: right, background: '', bold: false, border: '', enabled: true, font: '', font_size: 18, foreground: '', icon: 'fa:history', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Histórico Geral, tooltip: '', underline: false, visible: true}
+    properties: {align: right, background: '', bold: false, border: '', enabled: true, font: '', font_size: 18, foreground: '', icon: 'fa:history', icon_align: right, italic: false, role: null, spacing_above: small, spacing_below: small, text: Histórico Geral, tooltip: '', underline: false, visible: true}
     type: Button
   - data_bindings: []
     event_bindings: {click: graficos_gerais_menu_link_click}
-    layout_properties: {grid_position: 'APKWHL,KLMGTF'}
+    layout_properties: {grid_position: 'EXFQWH,CHSKKR'}
     name: graficos_gerais_menu_link
-    properties: {align: right, background: '', bold: false, border: '', enabled: true, font: '', font_size: 18, foreground: '', icon: 'fa:clipboard', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Gráficos & Relatórios, tooltip: '', underline: false, visible: true}
+    properties: {align: right, background: '', bold: false, border: '', enabled: true, font: '', font_size: 18, foreground: '', icon: 'fa:clipboard', icon_align: right, italic: false, role: null, spacing_above: small, spacing_below: small, text: Gráficos & Relatórios, tooltip: '', underline: false, visible: true}
     type: Button
-  - layout_properties: {grid_position: 'IBBSAL,AFEUYU'}
+  - event_bindings: {}
+    layout_properties: {grid_position: 'IBBSAL,AFEUYU'}
     name: clinica_menu_link
-    properties: {align: right, text: button_1}
+    properties: {align: right, bold: true, font_size: 18, icon: 'fa:podcast', icon_align: right, text: Clínica Godinho}
+    type: Button
+  - layout_properties: {grid_position: 'BANONV,FUDAXF'}
+    name: button_2
+    properties: {text: button_2}
     type: Button
   - layout_properties: {grid_position: 'SDSOHE,HMOHJD'}
     name: label_1
@@ -32,7 +42,7 @@ components:
     name: signout_link
     properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Primary', icon: 'fa:sign-out', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Sign out, tooltip: '', underline: false, visible: true}
     type: Button
-  layout_properties: {slot: logo}
+  layout_properties: {slot: left-nav}
   name: column_panel_2
   properties: {col_widths: '{}'}
   type: ColumnPanel

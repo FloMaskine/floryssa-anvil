@@ -1,4 +1,4 @@
-from ._anvil_designer import FrameTemplate
+from ._anvil_designer import MenuTemplate
 from anvil import *
 import anvil.server
 import anvil.users
@@ -9,7 +9,7 @@ from ..Reports import Reports
 from ..Sales import Sales
 
 #This is your startup form. It has a sidebar with navigation links and a content panel where page content will be added.
-class Frame(FrameTemplate):
+class Menu(MenuTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -19,7 +19,7 @@ class Frame(FrameTemplate):
     #Set the Plotly plots template to match the theme of the app
     Plot.templates.default = "rally"
     #When the app starts up, the Sales form will be added to the page
-    self.content_panel.add_component(Sales())
+    self.content_panel.add_component(PainelPrincipal())
     #Change the color of the sales_page_link to indicate that the Sales page has been selected
     self.sales_page_link.background = app.theme_colors['Primary Container']
     
@@ -47,6 +47,12 @@ class Frame(FrameTemplate):
   #   """This method is called when the link is clicked"""
   #   anvil.users.logout()
   #   open_form('Logout')
+
+  @handle("clinica_menu_link", "click")
+  def clinica_menu_link_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.content_panel.clear()
+    self.content_panel.add_component(self.Clinica())
 
 
 

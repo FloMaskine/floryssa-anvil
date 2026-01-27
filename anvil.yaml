@@ -208,5 +208,5 @@ services:
 - client_config: {allow_signup: true, confirm_email: false, enable_automatically: true, use_email: true, use_google: false}
   server_config: {user_table: users}
   source: /runtime/services/anvil/users.yml
-startup: {module: Frame, type: form}
+startup: {module: PainelPrincipal, type: form}
 startup_form: null
