@@ -24,7 +24,7 @@ class Menu(MenuTemplate):
     self.sales_page_link.background = app.theme_colors['Primary Container']
     
 
-  def historico_geral_menu_link_click(self, **event_args):
+  def historico_geral_menu_link_button_click(self, **event_args):
     """This method is called when the link is clicked"""
     #Clear the content panel and add the wanted Form
     self.content_panel.clear()
@@ -33,7 +33,7 @@ class Menu(MenuTemplate):
     self.sales_page_link.background = app.theme_colors['Primary Container']
     self.reports_page_link.background = "transparent"
 
-  def graficos_gerais_menu_link_click(self, **event_args):
+  def graficos_gerais_menu_link_button_click(self, **event_args):
     """This method is called when the link is clicked"""
     #Clear the content panel and add the Reports Form
     self.content_panel.clear()
@@ -48,16 +48,16 @@ class Menu(MenuTemplate):
   #   anvil.users.logout()
   #   open_form('Logout')
 
-  @handle("clinica_menu_link", "click")
-  def clinica_menu_link_click(self, **event_args):
+  @handle("clinica_menu_link_button", "click")
+  def clinica_menu_link_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.content_panel.clear()
     self.content_panel.add_component(self.Clinica())
 
-
-
-
-
+  @handle("painel_principal_menu_link_button", "click")
+  def painel_principal_menu_link_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
 
 
 
