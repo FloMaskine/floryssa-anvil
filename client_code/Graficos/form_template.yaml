@@ -1,16 +1,29 @@
 components:
-- layout_properties: {grid_position: 'REOZUZ,PHERBF'}
-  name: column_panel_1
-  properties: {}
+- components:
+  - layout_properties: {grid_position: 'RIZZHR,FRQKMV'}
+    name: graficos_label_datepicker
+    properties: {text: Selecione o mês}
+    type: Label
+  - layout_properties: {grid_position: 'RTRBKE,OUZIAK'}
+    name: graficos_datepicker
+    properties: {}
+    type: DatePicker
+  layout_properties: {full_width_row: false, grid_position: 'REOZUZ,PHERBF'}
+  name: graficos_datepicker_container
+  properties: {spacing_above: medium, spacing_below: medium, wrap_on: mobile}
   type: ColumnPanel
 - components:
-  - layout_properties: {}
+  - layout_properties: {grid_position: 'TNCXHU,XBWEJM'}
+    name: label_mes_selecionado
+    properties: {}
+    type: Label
+  - layout_properties: {grid_position: 'WIEBQD,IFXFSU'}
     name: plot_1
     properties: {}
     type: Plot
-  layout_properties: {grid_position: 'PKGOVG,TDMVLA'}
-  name: flow_panel_graficos
-  properties: {align: center}
-  type: FlowPanel
+  layout_properties: {grid_position: 'AFCTNT,XTCWHE'}
+  name: column_panel_2
+  properties: {}
+  type: ColumnPanel
 container: {type: ColumnPanel}
 is_package: true

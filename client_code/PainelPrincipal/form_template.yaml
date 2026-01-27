@@ -38,7 +38,7 @@ components:
   - components:
     - layout_properties: {grid_position: 'CWAHBW,PEJLQU'}
       name: label_11
-      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 50, foreground: 'theme:Primary', icon: 'fa:users', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 50, foreground: 'theme:Primary', icon: 'fa:hand-o-down', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
       type: Label
     - layout_properties: {grid_position: 'CWAHBW,PMLAHK YNPGEU,LHVYOS'}
       name: falta_ganhar_label
@@ -53,9 +53,29 @@ components:
     properties: {col_widths: '{"PEJLQU":20,"PMLAHK":40}', role: card}
     type: ColumnPanel
   - components:
-    - layout_properties: {grid_position: 'EMOITM,GHKWWK'}
-      name: label_9
-      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 50, foreground: 'theme:Primary', icon: 'fa:pie-chart', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    - layout_properties: {grid_position: 'EMOITM,PRDMJZ'}
+      name: label_11_copy
+      properties:
+        align: left
+        background: ''
+        bold: false
+        border: ''
+        font: ''
+        font_size: 50
+        foreground: theme:Primary
+        icon: fa:hand-o-up
+        icon_align: left
+        italic: false
+        role: null
+        spacing:
+          margin: [null, 23, null, null]
+          padding: [null, 0, null, null]
+        spacing_above: small
+        spacing_below: small
+        text: ''
+        tooltip: ''
+        underline: false
+        visible: true
       type: Label
     - layout_properties: {grid_position: 'EMOITM,VBOZUY XMMHJR,FHNILM'}
       name: falta_pagar_label
@@ -67,15 +87,15 @@ components:
       type: Label
     layout_properties: {grid_position: 'RICELT,FZREAD'}
     name: card_4
-    properties: {col_widths: '{"GHKWWK":20,"VBOZUY":40}', role: card}
+    properties: {col_widths: '{"VBOZUY":50,"PRDMJZ":20}', role: card}
     type: ColumnPanel
   - components:
     - layout_properties: {grid_position: 'NNDSER,RCPRGZ'}
-      name: label_13
-      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: small, spacing_below: small, text: Progress, tooltip: '', underline: false, visible: true}
+      name: progresso_contas_label
+      properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: small, spacing_below: small, text: Progresso, tooltip: '', underline: false, visible: true}
       type: Label
     - layout_properties: {grid_position: 'HLFJOM,CDHIEY'}
-      name: plot_2
+      name: grafico_contas_pagas
       properties: {height: '370', interactive: true, spacing_above: small, spacing_below: small, tooltip: '', visible: true}
       type: Plot
     layout_properties: {grid_position: 'ZWYAMV,XJDGPO'}
@@ -85,21 +105,37 @@ components:
   - components:
     - layout_properties: {grid_position: 'ZCOOLF,ZNQHMJ'}
       name: contas_label
-      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: small, spacing_below: small, text: Contas, tooltip: '', underline: false, visible: true}
+      properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: small, spacing_below: small, text: Contas, tooltip: '', underline: false, visible: true}
       type: Label
     - components:
-      - layout_properties: {}
-        name: text_area_1
-        properties: {align: center, height: 39}
-        type: TextArea
-      - layout_properties: {}
-        name: label_1
+      - layout_properties: {grid_position: 'XDMMXZ,KSNVIS'}
+        name: text_conta_flora
         properties: {}
+        type: TextArea
+      - layout_properties: {grid_position: 'XDMMXZ,LYTQTL'}
+        name: label_conta_flora
+        properties: {text: Conta Flora}
         type: Label
-      layout_properties: {grid_position: 'YAITWY,BMHBKJ'}
-      name: flow_panel_contas
-      properties: {}
-      type: FlowPanel
+      - layout_properties: {grid_position: 'KWJGEH,YZIVLQ'}
+        name: text_conta_lary
+        properties: {}
+        type: TextArea
+      - layout_properties: {grid_position: 'KWJGEH,UEESHG'}
+        name: label_conta_lary
+        properties: {text: Conta Lary}
+        type: Label
+      - layout_properties: {grid_position: 'FJIYOS,OIMBAE'}
+        name: text_conta_pj
+        properties: {}
+        type: TextArea
+      - layout_properties: {grid_position: 'FJIYOS,XDHGBJ'}
+        name: label_conta_pj
+        properties: {text: Conta PJ}
+        type: Label
+      layout_properties: {grid_position: 'GIQKTP,UWHQPK'}
+      name: contas_card
+      properties: {role: card}
+      type: ColumnPanel
     layout_properties: {grid_position: 'ZWYAMV,QWVFNP'}
     name: valores_atuais_contas
     properties: {col_widths: '{}', role: card}

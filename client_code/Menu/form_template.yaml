@@ -1,14 +1,5 @@
 components:
-- components: []
-  layout_properties: {slot: default}
-  name: content_panel
-  properties: {}
-  type: ColumnPanel
 - components:
-  - layout_properties: {grid_position: 'LLNAAG,BRSXTM'}
-    name: spacer_1
-    properties: {height: 32}
-    type: Spacer
   - event_bindings: {}
     layout_properties: {grid_position: 'YZZRCD,RCOHKW'}
     name: painel_principal_menu_link_button
@@ -18,6 +9,10 @@ components:
     layout_properties: {grid_position: 'SHSTLK,FTGDPZ'}
     name: clinica_menu_link
     properties: {align: right, bold: true, font_size: 18, icon: 'fa:podcast', icon_align: right, text: Clínica Godinho}
+    type: Button
+  - layout_properties: {grid_position: 'NKQUXS,MNTXBJ'}
+    name: gastos_mes_menu_link_button
+    properties: {align: right, font_size: 18, icon: 'fa:calendar-check-o', icon_align: right, text: Gastos do Mês}
     type: Button
   - event_bindings: {click: historico_geral_menu_link_button_click}
     layout_properties: {grid_position: 'ATKKKJ,DBSYGY'}
@@ -30,10 +25,6 @@ components:
     name: graficos_gerais_menu_link_button
     properties: {align: right, background: '', bold: false, border: '', enabled: true, font: '', font_size: 18, foreground: '', icon: 'fa:clipboard', icon_align: right, italic: false, role: null, spacing_above: small, spacing_below: small, text: Gráficos & Relatórios, tooltip: '', underline: false, visible: true}
     type: Button
-  - layout_properties: {grid_position: 'ERYCCL,CYWWKT'}
-    name: button_1
-    properties: {text: button_1}
-    type: Button
   - layout_properties: {grid_position: 'SDSOHE,HMOHJD'}
     name: label_1
     properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '                                                                                 ', tooltip: '', underline: false, visible: true}
@@ -44,7 +35,7 @@ components:
     properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Primary', icon: 'fa:sign-out', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Sign out, tooltip: '', underline: false, visible: true}
     type: Button
   layout_properties: {slot: left-nav}
-  name: column_panel_2
+  name: menu_panel
   properties: {col_widths: '{}'}
   type: ColumnPanel
 container:

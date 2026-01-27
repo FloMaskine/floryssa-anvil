@@ -1,0 +1,16 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'IHRNMX,JHJDBV'}
+    name: label_gastos_mes
+    properties: {bold: true, font_size: 18, text: Gastos do mês}
+    type: Label
+  - layout_properties: {grid_position: 'WAXJNW,QUHLVG'}
+    name: panel_gastos_mes
+    properties: {item_template: GastosMes.ItemTemplate3}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'EETREO,YLZUEQ'}
+  name: column_panel_gastos_mes
+  properties: {}
+  type: ColumnPanel
+container: {type: ColumnPanel}
+is_package: true
