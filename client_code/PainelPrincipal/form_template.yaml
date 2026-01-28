@@ -108,7 +108,7 @@ components:
       properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: small, spacing_below: small, text: Contas, tooltip: '', underline: false, visible: true}
       type: Label
     - components:
-      - layout_properties: {grid_position: 'XDMMXZ,KSNVIS'}
+      - layout_properties: {full_width_row: false, grid_position: 'XDMMXZ,KSNVIS'}
         name: text_conta_flora
         properties: {}
         type: TextArea
