@@ -197,10 +197,10 @@ native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=E
 package_name: Floryssa
 runtime_options:
   client_version: '3'
-  preview_v3: true
+  legacy_features: {__dict__: true, bootstrap3: true, class_names: true, root_container: true}
   server_spec: {base: python310-minimal}
   server_version: python3-sandbox
-  version: 2
+  version: 3
 services:
 - client_config: {}
   server_config: {}

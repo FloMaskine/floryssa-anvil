@@ -8,18 +8,22 @@ components:
     name: repeating_panel_pacientes_particulares
     properties: {item_template: GastosMes.ItemTemplate3}
     type: RepeatingPanel
-  - layout_properties: {grid_position: 'ZAKALN,IYSHBM'}
+  - layout_properties: {grid_position: 'ANMRLG,CMYRLL'}
     name: spacer_1
     properties: {height: 32}
     type: Spacer
-  - layout_properties: {grid_position: 'WAXJNW,QUHLVG HNYFEB,GUVQAK'}
-    name: repeating_panel_clinicas
-    properties: {item_template: GastosMes.ItemTemplate3}
-    type: RepeatingPanel
-  - layout_properties: {grid_position: 'JSYWEB,RMGVZZ'}
+  - layout_properties: {grid_position: 'IWMEIM,ETZDQN'}
+    name: label_clinica_copy
+    properties: {text: Clínica Godinho}
+    type: Label
+  - layout_properties: {grid_position: 'XKRFQA,TOHAOT'}
     name: spacer_1_copy
     properties: {height: 32}
     type: Spacer
+  - layout_properties: {grid_position: 'DKPKME,MINNCL'}
+    name: repeating_panel_clinicas
+    properties: {item_template: GastosMes.ItemTemplate3}
+    type: RepeatingPanel
   layout_properties: {grid_position: 'FAXMZO,URBRQY'}
   name: column_panel_1
   properties: {}
