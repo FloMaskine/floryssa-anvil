@@ -54,12 +54,12 @@ db_schema:
     - admin_ui: {order: 4, width: 200}
       name: data
       type: date
-    - admin_ui: {order: 5, width: 200}
-      name: vencimento
-      type: date
     - admin_ui: {order: 6, width: 200}
       name: status
       type: bool
+    - admin_ui: {order: 4.5, width: 200}
+      name: vencimento
+      type: number
     server: full
     title: contas-fixas
   dashboard:
@@ -100,7 +100,36 @@ db_schema:
       type: number
     server: full
     title: dashboard
-  entry:
+  expenses:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: item-id
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: name
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: category
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      name: value
+      type: number
+    - admin_ui: {order: 4, width: 200}
+      name: date
+      type: date
+    - admin_ui: {order: 5, width: 200}
+      name: month
+      type: string
+    - admin_ui: {order: 6, width: 200}
+      name: year
+      type: number
+    - admin_ui: {order: 7, width: 200}
+      name: related-expense
+      type: string
+    server: full
+    title: expenses
+  income:
     client: none
     columns:
     - admin_ui: {order: 0, width: 200}
@@ -131,36 +160,7 @@ db_schema:
       name: nota-lancada
       type: bool
     server: full
-    title: entry
-  expenses:
-    client: none
-    columns:
-    - admin_ui: {order: 0, width: 200}
-      name: item-id
-      type: string
-    - admin_ui: {order: 1, width: 200}
-      name: name
-      type: string
-    - admin_ui: {order: 2, width: 200}
-      name: category
-      type: string
-    - admin_ui: {order: 3, width: 200}
-      name: value
-      type: number
-    - admin_ui: {order: 4, width: 200}
-      name: date
-      type: date
-    - admin_ui: {order: 5, width: 200}
-      name: month
-      type: string
-    - admin_ui: {order: 6, width: 200}
-      name: year
-      type: number
-    - admin_ui: {order: 7, width: 200}
-      name: related-expense
-      type: string
-    server: full
-    title: expenses
+    title: income
   users:
     client: none
     columns:
