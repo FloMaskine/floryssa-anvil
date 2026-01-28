@@ -12,7 +12,7 @@ components:
   - data_bindings: []
     layout_properties: {grid_position: 'FQARKO,LEVZWI'}
     name: historico_gastos_list
-    properties: {item_template: Historicos.RowTemplate}
+    properties: {item_template: Historicos.ItemTemplate}
     type: RepeatingPanel
   layout_properties: {grid_position: 'TMIMPR,WMQMZT'}
   name: card_1
@@ -31,7 +31,7 @@ components:
   - data_bindings: []
     layout_properties: {grid_position: 'PQTXCD,OSPKVX UOOUTS,VDCBBA'}
     name: historico_gastos_list_copy
-    properties: {item_template: Historicos.RowTemplate}
+    properties: {item_template: Historicos.ItemTemplate}
     type: RepeatingPanel
   layout_properties: {grid_position: 'NXBMON,OSRNEE'}
   name: card_5
