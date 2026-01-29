@@ -191,7 +191,7 @@ db_schema:
     server: full
     title: Users
 dependencies: []
-metadata: {title: Floryssa}
+metadata: {logo_img: null, title: Floryssa}
 name: Floryssa
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">'}
 package_name: Floryssa
@@ -206,10 +206,75 @@ services:
   server_config: {}
   source: /runtime/services/tables.yml
 - client_config: {allow_signup: true, confirm_email: false, enable_automatically: true, use_email: true, use_google: true}
-  server_config: {user_table: users}
+  server_config:
+    email_content:
+      reset_password:
+        html: |-
+          <p>Hi there,</p>
+          <p>You have requested a password reset for your account {{email}}. To reset your password, click the link below:</p>
+          <p>{{reset_link}}</p>
+          <p>This link will expire in ten minutes.</p>
+    user_table: users
   source: /runtime/services/anvil/users.yml
-- client_config: {}
-  server_config: {}
+- client_config:
+    app_files:
+    - alternateLink: https://drive.google.com/file/d/10GnRoXlK5oAbOPMPQ0aCDTwbXVq7DgwK/view?usp=drivesdk
+      appDataContents: false
+      capabilities: {canCopy: true, canEdit: true}
+      copyRequiresWriterPermission: false
+      copyable: true
+      createdDate: '2024-12-13T01:54:41.294Z'
+      downloadUrl: https://www.googleapis.com/drive/v2/files/10GnRoXlK5oAbOPMPQ0aCDTwbXVq7DgwK?alt=media&source=downloadUrl
+      editable: true
+      embedLink: https://drive.google.com/file/d/10GnRoXlK5oAbOPMPQ0aCDTwbXVq7DgwK/preview?usp=drivesdk
+      etag: '"MTczNDA1NDg4MTI5OA"'
+      explicitlyTrashed: false
+      fileExtension: png
+      fileSize: '999259'
+      headRevisionId: 0B189WiQXq-ildXpoMTJsNEV6R0U2STZNYzZGOW9CanhwVXdFPQ
+      iconLink: https://drive-thirdparty.googleusercontent.com/16/type/image/png
+      id: 10GnRoXlK5oAbOPMPQ0aCDTwbXVq7DgwK
+      imageMediaMetadata: {height: 1024, rotation: 0, width: 1024}
+      kind: drive#file
+      labels: {hidden: false, restricted: false, starred: false, trashed: false, viewed: true}
+      lastModifyingUser:
+        displayName: Flora Maxine
+        emailAddress: gmdm2010@gmail.com
+        isAuthenticatedUser: true
+        kind: drive#user
+        permissionId: '03798287376991581474'
+        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocJdH7eLha5X7aj8BrPGnoT_E1lwBK5ZLj-ni6yMHvpsIdN8QqrWlA=s64'}
+      lastModifyingUserName: Flora Maxine
+      lastViewedByMeDate: '2024-12-13T01:54:59.998Z'
+      markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
+      md5Checksum: 8614eba6e4edb0b14c9ca53e0e606850
+      mimeType: image/png
+      modifiedByMeDate: '2024-12-13T01:54:41.298Z'
+      modifiedDate: '2024-12-13T01:54:41.298Z'
+      originalFilename: floryssa_icon-nobg.png
+      ownerNames: [Flora Maxine]
+      owners:
+      - displayName: Flora Maxine
+        emailAddress: gmdm2010@gmail.com
+        isAuthenticatedUser: true
+        kind: drive#user
+        permissionId: '03798287376991581474'
+        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocJdH7eLha5X7aj8BrPGnoT_E1lwBK5ZLj-ni6yMHvpsIdN8QqrWlA=s64'}
+      parents:
+      - {id: 1QlfpvI9yDQqmDj3wFnhP2w9f63MXaN6W, isRoot: false, kind: drive#parentReference, parentLink: 'https://www.googleapis.com/drive/v2/files/1QlfpvI9yDQqmDj3wFnhP2w9f63MXaN6W', selfLink: 'https://www.googleapis.com/drive/v2/files/10GnRoXlK5oAbOPMPQ0aCDTwbXVq7DgwK/parents/1QlfpvI9yDQqmDj3wFnhP2w9f63MXaN6W'}
+      permission: roclient
+      python_name: floryssa_icon_nobg_png
+      quotaBytesUsed: '999259'
+      selfLink: https://www.googleapis.com/drive/v2/files/10GnRoXlK5oAbOPMPQ0aCDTwbXVq7DgwK
+      shared: false
+      spaces: [drive]
+      thumbnailLink: https://lh3.googleusercontent.com/drive-storage/AJQWtBO8YKB5Jg_Zg1YsLg6GoiM6a9wr3VLyXXEJ036Dbr2x6W-_z7jlLmO6hTV7FpCvn-YUsZR_v5yJDk3UT81ML0Q1zIBaZiLlAkpvvcNivc-YdhJlyg=s220
+      title: floryssa_icon-nobg.png
+      userPermission: {etag: '"J0aO6Mxob-1YBWDte6vvOZ6zKvE"', id: me, kind: drive#permission, pendingOwner: false, role: owner, selfLink: 'https://www.googleapis.com/drive/v2/files/10GnRoXlK5oAbOPMPQ0aCDTwbXVq7DgwK/permissions/me', type: user}
+      version: '5'
+      webContentLink: https://drive.google.com/uc?id=10GnRoXlK5oAbOPMPQ0aCDTwbXVq7DgwK&export=download
+      writersCanShare: true
+  server_config: {enc_delegation_refresh_token: l9RhDmONuz3W5y+zHPOVxN37ZfuPZ9ifJERaX8Wc0pdVixgp2zbYtrAGnxMSqmAmacIPMkU+DatbRLCbGKqvQVcfqcKGo85ceuOlAdfhDEF50hsss50wSl1k5jA5yg4suZ4nqGEq5+wZlJnpqsYmNAHwsHXD+69X557T8xQGqnxHYNgb8KQyMLE5XZvZOaFlKWmqovy5HKAf2FBLWWerh96obHjMQc2kBZgsLQTmQzkwB2cChhJQvS5uZc92UnDNH46w0pJpnLPEqi0VC7Q9V/Rc2tJq+f+2oXSlQUQOANwOj9kHLdeqI+EaQkaPqQ==}
   source: /runtime/services/google.yml
 startup: {module: PainelPrincipal, type: form}
 startup_form: null

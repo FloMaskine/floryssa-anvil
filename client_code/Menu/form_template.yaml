@@ -38,6 +38,11 @@ components:
   name: menu_panel
   properties: {col_widths: '{}'}
   type: ColumnPanel
+- data_bindings: []
+  layout_properties: {slot: logo}
+  name: logo_icon
+  properties: {source: app_files.floryssa_icon_nobg_png}
+  type: Image
 container:
   data_bindings: []
   event_bindings: {}
@@ -48,6 +53,6 @@ is_package: true
 properties: []
 slots:
   components_slot:
-    index: 1
+    index: 0
     set_layout_properties: {slot: default}
     target: {name: '', type: container}
