@@ -21,6 +21,10 @@ components:
     name: plot_1
     properties: {}
     type: Plot
+  - layout_properties: {grid_position: 'WIEBQD,IFXFSU'}
+    name: plot_2
+    properties: {}
+    type: Plot
   layout_properties: {grid_position: 'AFCTNT,XTCWHE'}
   name: column_panel_2
   properties: {}

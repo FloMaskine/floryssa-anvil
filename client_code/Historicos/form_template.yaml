@@ -5,6 +5,7 @@ components:
     properties: {align: center, bold: true, font_size: 18, text: Histórico de Gastos}
     type: Label
   - data_bindings: []
+    event_bindings: {change: historico_gastos_datepicker_change}
     layout_properties: {grid_position: 'LCVSQD,YPRJEU'}
     name: historico_gastos_datepicker
     properties: {}
@@ -24,6 +25,7 @@ components:
     properties: {align: center, background: '', bold: true, border: '', font: '', font_size: 18, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: small, spacing_below: small, text: Histórico de Receitas, tooltip: '', underline: false, visible: true}
     type: Label
   - data_bindings: []
+    event_bindings: {change: historico_receitas_datepicker_copy_change}
     layout_properties: {grid_position: 'OFPISY,MZAESW'}
     name: historico_receitas_datepicker_copy
     properties: {}

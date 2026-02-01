@@ -15,8 +15,8 @@ class Logout(LogoutTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def button_signin_logout_page_click(self, **event_args):
+  def button_logout_click(self, **event_args):
     """This method is called when the button is clicked"""
-    anvil.users.login_with_form()
-    open_form('Frame')
+    anvil.users.logout()
+    open_form('Login')
 

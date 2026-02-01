@@ -1,4 +1,4 @@
-from ._anvil_designer import ItemGastoTemplateTemplate
+from ._anvil_designer import ItemClinicaTemplateTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,23 +9,18 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class ItemGastoTemplate(ItemGastoTemplateTemplate):
+class ItemClinicaTemplate(ItemClinicaTemplateTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.label_description_gasto.text = self.item['name']
-    self.label_valor_gasto.text = f"R$ {self.item['value']}"
-    self.label_date_gasto.text = self.item['date'].strftime("%d/%m/%Y")
-    self.check_box_paid.checked = self.item['status']
+    self.label_nome.text = self.item['nome']
+    self.label_codinome.text = self.item['codinome']
+    self.label_total.text = f"R$ {self.item['total']}"
 
   def button_delete_click(self, **event_args):
     """This method is called when the button is clicked"""
-    anvil.server.call('delete_expense', self.item.get_id())
+    anvil.server.call('delete_client', self.item.get_id())
     self.parent.raise_event('x-refresh-data')
-
-  def check_box_paid_change(self, **event_args):
-    """This method is called when the check box is changed"""
-    self.item['status'] = self.check_box_paid.checked
 
   def button_edit_click(self, **event_args):
     """This method is called when the button is clicked"""

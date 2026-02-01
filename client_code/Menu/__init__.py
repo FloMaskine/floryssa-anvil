@@ -7,8 +7,11 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..Reports import Reports
-from ..Sales import Sales
+from ..PainelPrincipal import PainelPrincipal
+from ..Clinica import Clinica
+from ..GastosMes import GastosMes
+from ..Historicos import Historicos
+from ..Graficos import Graficos
 
 #This is your startup form. It has a sidebar with navigation links and a content panel where page content will be added.
 class Menu(MenuTemplate):
@@ -20,46 +23,58 @@ class Menu(MenuTemplate):
 
     #Set the Plotly plots template to match the theme of the app
     Plot.templates.default = "rally"
-    #When the app starts up, the Sales form will be added to the page
+    #When the app starts up, the PainelPrincipal form will be added to the page
     self.content_panel.add_component(PainelPrincipal())
-    #Change the color of the sales_page_link to indicate that the Sales page has been selected
-    self.sales_page_link.background = app.theme_colors['Primary Container']
+    #Change the color of the painel_principal_menu_link_button to indicate that the PainelPrincipal page has been selected
+    self.painel_principal_menu_link_button.background = app.theme_colors['Primary Container']
     
+  def reset_links(self):
+    self.painel_principal_menu_link_button.background = "transparent"
+    self.clinica_menu_link.background = "transparent"
+    self.gastos_mes_menu_link_button.background = "transparent"
+    self.historico_geral_menu_link_button.background = "transparent"
+    self.graficos_gerais_menu_link_button.background = "transparent"
 
   def historico_geral_menu_link_button_click(self, **event_args):
     """This method is called when the link is clicked"""
     #Clear the content panel and add the wanted Form
     self.content_panel.clear()
     self.content_panel.add_component(Historicos())
-    #Change the color of the sales_page_link to indicate that the Sales page has been selected
-    self.sales_page_link.background = app.theme_colors['Primary Container']
-    self.reports_page_link.background = "transparent"
+    #Change the color of the link to indicate that the page has been selected
+    self.reset_links()
+    self.historico_geral_menu_link_button.background = app.theme_colors['Primary Container']
 
   def graficos_gerais_menu_link_button_click(self, **event_args):
     """This method is called when the link is clicked"""
     #Clear the content panel and add the Reports Form
     self.content_panel.clear()
-    self.content_panel.add_component(Reports())
-    #Change the color of the sales_page_link to indicate that the Reports page has been selected
-    self.reports_page_link.background = app.theme_colors['Primary Container']
-    self.sales_page_link.background = "transparent"
+    self.content_panel.add_component(Graficos())
+    #Change the color of the link to indicate that the page has been selected
+    self.reset_links()
+    self.graficos_gerais_menu_link_button.background = app.theme_colors['Primary Container']
 
-  #If using the Users service, uncomment this code to log out the user:
-  # def signout_link_click(self, **event_args):
-  #   """This method is called when the link is clicked"""
-  #   anvil.users.logout()
-  #   open_form('Logout')
+  def gastos_mes_menu_link_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.content_panel.clear()
+    self.content_panel.add_component(GastosMes())
+    self.reset_links()
+    self.gastos_mes_menu_link_button.background = app.theme_colors['Primary Container']
 
-  @handle("clinica_menu_link_button", "click")
+  def signout_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    anvil.users.logout()
+    open_form('Login')
+
   def clinica_menu_link_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.content_panel.clear()
-    self.content_panel.add_component(self.Clinica())
+    self.content_panel.add_component(Clinica())
+    self.reset_links()
+    self.clinica_menu_link.background = app.theme_colors['Primary Container']
 
-  @handle("painel_principal_menu_link_button", "click")
   def painel_principal_menu_link_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    
-
-
-
+    self.content_panel.clear()
+    self.content_panel.add_component(PainelPrincipal())
+    self.reset_links()
+    self.painel_principal_menu_link_button.background = app.theme_colors['Primary Container']

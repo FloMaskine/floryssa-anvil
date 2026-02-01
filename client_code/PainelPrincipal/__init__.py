@@ -13,45 +13,22 @@ class PainelPrincipal(PainelPrincipalTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    # Any code you write here will run before the form opens.
-    #The x-axis of plot_1 will be the months of the year. The y-axis will be dummy data returned from the server
-    self.x_months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
-    #Get the y-values from the server
-    self.y_values = anvil.server.call('return_data', "2023")
-    self.create_line_graph()
+    self.load_dashboard_data()
     
-    self.plot_2.data = [
+  def load_dashboard_data(self):
+    dashboard_data = anvil.server.call('get_dashboard_data')
+    self.entradas_mes.text = f"R$ {dashboard_data['entradas_mes']:.2f}"
+    self.saidas_mes.text = f"R$ {dashboard_data['saidas_mes']:.2f}"
+    self.falta_ganhar.text = f"R$ {dashboard_data['falta_ganhar']:.2f}"
+    self.falta_pagar.text = f"R$ {dashboard_data['falta_pagar']:.2f}"
+    self.text_conta_flora.text = f"R$ {dashboard_data['conta_flora']:.2f}"
+    self.text_conta_lary.text = f"R$ {dashboard_data['conta_lary']:.2f}"
+    self.text_conta_pj.text = f"R$ {dashboard_data['conta_pj']:.2f}"
+
+    self.grafico_contas_pagas.data = [
       go.Pie(
-        labels=["Completed", "In progress", "Needs Review", "Not started"],
-        values=[30, 21, 10, 39 ],
+        labels=["Paid", "Remaining"],
+        values=[dashboard_data['progresso_contas_pagas'], 100 - dashboard_data['progresso_contas_pagas']],
         hole=.5
       )
     ]
-
-    #Set the contents of the data grid (which has a repeating panel inside) to the contents of 
-    #the Files table. This is done on the secure server where you might only want to return user-visible data
-    self.repeating_panel_1.items = anvil.server.call('return_table')
-
-  def create_line_graph(self):
-    self.plot_1.data = [
-      go.Scatter(
-        x=self.x_months,
-        y=self.y_values[0],
-        fill="tozeroy",
-        name="Product A"
-      ),
-        go.Scatter(
-        x=self.x_months,
-        y=self.y_values[1],
-        fill="tonexty",
-        name="Product B"
-      )
-    ]
-
-  #Update the values in the line graph based on the selected value of the drop down menu
-  def drop_down_1_change(self, **event_args):
-    """This method is called when an item is selected"""
-    self.y_values = anvil.server.call('return_data', self.drop_down_1.selected_value)
-    self.create_line_graph()
-    
-

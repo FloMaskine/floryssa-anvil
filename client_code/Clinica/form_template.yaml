@@ -8,13 +8,47 @@ components:
   properties: {height: 32}
   type: Spacer
 - components:
+  - components:
+    - layout_properties: {grid_position: 'VPLZIB,DEKMJD'}
+      name: text_box_nome_clinica
+      properties: {placeholder: Nome}
+      type: TextBox
+    - layout_properties: {grid_position: 'VPLZIB,GLBYYP'}
+      name: text_box_codinome_clinica
+      properties: {placeholder: Codinome}
+      type: TextBox
+    - layout_properties: {grid_position: 'VPLZIB,DVKCMB'}
+      name: text_box_cpf_cnpj_clinica
+      properties: {placeholder: CPF/CNPJ}
+      type: TextBox
+    - layout_properties: {grid_position: 'VPLZIB,SFDPVF'}
+      name: text_box_valor_sessao_clinica
+      properties: {placeholder: Valor por Sessão}
+      type: TextBox
+    - layout_properties: {grid_position: 'VPLZIB,YFGDDL'}
+      name: text_box_sessoes_mes_clinica
+      properties: {placeholder: Sessões por Mês}
+      type: TextBox
+    - layout_properties: {grid_position: 'VPLZIB,PYAVOL'}
+      name: drop_down_categoria_clinica
+      properties: {items: [Particular, Clinica]}
+      type: DropDown
+    - event_bindings: {click: button_add_client_click}
+      layout_properties: {grid_position: 'VPLZIB,WVRJNL'}
+      name: button_add_client
+      properties: {text: Adicionar}
+      type: Button
+    layout_properties: {grid_position: 'FAXMZO,BJYQKB'}
+    name: column_panel_add_client
+    properties: {}
+    type: ColumnPanel
   - layout_properties: {grid_position: 'IHRNMX,JHJDBV'}
     name: label_pacientes
     properties: {text: Pacientes Particulares}
     type: Label
   - layout_properties: {grid_position: 'WAXJNW,QUHLVG WGQGJZ,FCBJQC'}
     name: repeating_panel_pacientes_particulares
-    properties: {item_template: GastosMes.ItemGastoTemplate}
+    properties: {item_template: Clinica.ItemClinicaTemplate}
     type: RepeatingPanel
   - layout_properties: {grid_position: 'IWMEIM,ETZDQN'}
     name: label_clinicas
@@ -26,7 +60,7 @@ components:
     type: Spacer
   - layout_properties: {grid_position: 'DKPKME,MINNCL PVPWYL,LZDCHC'}
     name: repeating_panel_clinicas
-    properties: {item_template: GastosMes.ItemGastoTemplate}
+    properties: {item_template: Clinica.ItemClinicaTemplate}
     type: RepeatingPanel
   - layout_properties: {grid_position: 'OUGRFO,OVDTJS'}
     name: spacer_1_copy_2

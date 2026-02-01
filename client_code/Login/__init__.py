@@ -18,5 +18,10 @@ class Login(LoginTemplate):
 
   def button_login_click(self, **event_args):
     """This method is called when the button is clicked"""
-    anvil.users.login_with_form()
-    open_form("Frame")
+    # anvil.users.login_with_form()
+    # open_form("Frame")
+    user = anvil.users.login_with_form()
+    if user:
+      open_form("PainelPrincipal")
+    else:
+      alert("Login failed")
