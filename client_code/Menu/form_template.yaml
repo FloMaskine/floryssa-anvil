@@ -15,6 +15,21 @@ components:
     name: gastos_mes_menu_link_button
     properties: {align: right, font_size: 18, icon: 'fa:calendar-check-o', icon_align: right, text: Gastos do Mês}
     type: Button
+  - event_bindings: {click: income_mes_menu_link_button_click}
+    layout_properties: {grid_position: 'NKQUXS,MNTXBJ'}
+    name: income_mes_menu_link_button
+    properties: {align: right, font_size: 18, icon: 'fa:dollar', icon_align: right, text: Rendas do Mês}
+    type: Button
+  - event_bindings: {click: dashboard_income_menu_link_button_click}
+    layout_properties: {grid_position: 'NKQUXS,MNTXBJ'}
+    name: dashboard_income_menu_link_button
+    properties: {align: right, font_size: 18, icon: 'fa:bar-chart', icon_align: right, text: Dashboard de Rendas}
+    type: Button
+  - event_bindings: {click: historico_income_menu_link_button_click}
+    layout_properties: {grid_position: 'ATKKKJ,DBSYGY'}
+    name: historico_income_menu_link_button
+    properties: {align: right, background: '', bold: false, border: '', enabled: true, font: '', font_size: 18, foreground: '', icon: 'fa:history', icon_align: right, italic: false, role: null, spacing_above: small, spacing_below: small, text: Histórico de Rendas, tooltip: '', underline: false, visible: true}
+    type: Button
   - event_bindings: {click: historico_geral_menu_link_button_click}
     layout_properties: {grid_position: 'ATKKKJ,DBSYGY'}
     name: historico_geral_menu_link_button

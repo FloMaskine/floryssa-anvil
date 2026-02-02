@@ -160,8 +160,19 @@ def delete_expense(expense_id):
 
 #<editor-fold desc="Receitas">
 @anvil.server.callable
-def get_income():
-  return app_tables.income.search()
+def add_income(income_data):
+  app_tables.income.add_row(
+    description=income_data['description'],
+    category=income_data['category'],
+    value=income_data['value'],
+    date=income_data['date'],
+    month=income_data['date'].strftime("%B"),
+    year=income_data['date'].year
+  )
+
+@anvil.server.callable
+def get_income(month, year):
+  return app_tables.income.search(month=month, year=year)
 
 @anvil.server.callable
 def get_income_by_date(start_date, end_date):
@@ -170,6 +181,31 @@ def get_income_by_date(start_date, end_date):
 @anvil.server.callable
 def get_income_by_month(month, year):
   return app_tables.income.search(month=month, year=year)
+
+@anvil.server.callable
+def delete_income(income_id):
+  row = app_tables.income.get_by_id(income_id)
+  row.delete()
+
+@anvil.server.callable
+def get_income_dashboard_data():
+  today = datetime.date.today()
+  current_month = today.strftime("%B")
+  current_year = today.year
+
+  total_income = sum([i['value'] for i in app_tables.income.search(month=current_month, year=current_year)])
+
+  income_by_month = {}
+  for i in app_tables.income.search():
+    month_year = i['date'].strftime("%Y-%m")
+    if month_year not in income_by_month:
+      income_by_month[month_year] = 0
+    income_by_month[month_year] += i['value']
+
+  return {
+    'total_income': total_income,
+    'income_by_month': income_by_month
+  }
 #</editor-fold>
 
 #<editor-fold desc="Clinica">

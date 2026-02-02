@@ -1,7 +1,18 @@
 <div class="structure">
   <div class="nav-holder">
     
-    <a class="sidebar-toggle" anvil-drop-slot="top-left-btn" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+    
+    <div class="floating-buttons">
+      <a class="sidebar-toggle floating-button-menu" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+      <div class="floating-button-main-add-container">
+        <a class="floating-button-main-add" href="javascript:void(0)"><i class="fa fa-plus"></i></a>
+        <div class="floating-add-options">
+          <a class="floating-button-add-gasto" href="javascript:void(0)"><i class="fa fa-dollar"></i> Gasto</a>
+          <a class="floating-button-add-income" href="javascript:void(0)"><i class="fa fa-money"></i> Renda</a>
+        </div>
+      </div>
+    </div>
+    
     
     <div class="left-nav">
       <div class="logo" anvil-slot="logo">
@@ -62,4 +73,17 @@
   
   $(window).on('resize', pinLeftNav)
 
+  $('.floating-button-main-add').on('click', function() {
+    $('.floating-add-options').toggleClass('visible');
+  });
+
+  $('.floating-button-add-gasto').on('click', function() {
+    $(document).trigger('add-gasto-selected');
+    $('.floating-add-options').removeClass('visible');
+  });
+
+  $('.floating-button-add-income').on('click', function() {
+    $(document).trigger('add-income-selected');
+    $('.floating-add-options').removeClass('visible');
+  });
 </script>

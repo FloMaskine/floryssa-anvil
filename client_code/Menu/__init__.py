@@ -12,6 +12,8 @@ from ..Clinica import Clinica
 from ..GastosMes import GastosMes
 from ..Historicos import Historicos
 from ..Graficos import Graficos
+from ..IncomeMes import IncomeMes
+from ..DashboardIncome import DashboardIncome
 
 #This is your startup form. It has a sidebar with navigation links and a content panel where page content will be added.
 class Menu(MenuTemplate):
@@ -27,13 +29,47 @@ class Menu(MenuTemplate):
     self.content_panel.add_component(PainelPrincipal())
     #Change the color of the painel_principal_menu_link_button to indicate that the PainelPrincipal page has been selected
     self.painel_principal_menu_link_button.background = app.theme_colors['Primary Container']
+    anvil.js.window.jQuery(anvil.js.window.document).on('add-gasto-selected', self.go_to_gastos)
+    anvil.js.window.jQuery(anvil.js.window.document).on('add-income-selected', self.go_to_income)
     
+  def go_to_gastos(self, *args):
+    """This method is called when the 'Add Gasto' floating button is clicked"""
+    self.gastos_mes_menu_link_button_click()
+
+  def go_to_income(self, *args):
+    """This method is called when the 'Add Income' floating button is clicked"""
+    self.income_mes_menu_link_button_click()
+
   def reset_links(self):
     self.painel_principal_menu_link_button.background = "transparent"
     self.clinica_menu_link.background = "transparent"
     self.gastos_mes_menu_link_button.background = "transparent"
     self.historico_geral_menu_link_button.background = "transparent"
     self.graficos_gerais_menu_link_button.background = "transparent"
+    self.income_mes_menu_link_button.background = "transparent"
+    self.dashboard_income_menu_link_button.background = "transparent"
+    self.historico_income_menu_link_button.background = "transparent"
+
+  def income_mes_menu_link_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.content_panel.clear()
+    self.content_panel.add_component(IncomeMes())
+    self.reset_links()
+    self.income_mes_menu_link_button.background = app.theme_colors['Primary Container']
+
+  def dashboard_income_menu_link_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.content_panel.clear()
+    self.content_panel.add_component(DashboardIncome())
+    self.reset_links()
+    self.dashboard_income_menu_link_button.background = app.theme_colors['Primary Container']
+
+  def historico_income_menu_link_button_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    self.content_panel.clear()
+    self.content_panel.add_component(Historicos()) # Assuming Historicos will handle both for now
+    self.reset_links()
+    self.historico_income_menu_link_button.background = app.theme_colors['Primary Container']
 
   def historico_geral_menu_link_button_click(self, **event_args):
     """This method is called when the link is clicked"""
