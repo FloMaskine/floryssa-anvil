@@ -20,7 +20,7 @@ class Menu(MenuTemplate):
     self.init_components(**properties)
     #Present users with a login form with just one line of code:
     #anvil.users.login_with_form()
-
+ 
     #Set the Plotly plots template to match the theme of the app
     Plot.templates.default = "rally"
     #When the app starts up, the PainelPrincipal form will be added to the page
