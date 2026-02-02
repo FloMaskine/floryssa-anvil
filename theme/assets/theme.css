@@ -542,7 +542,15 @@ input[disabled] ~ span {
 }
 
 .sidebar-toggle {
-  /* display: none; */
+  display: block;
+  padding: 8px 0px 10px 0px;
+  text-align: center;
+  margin: 10px;
+  width: 35px;
+  height: 35px;
+  color: %color:On Background%;
+  background: %color:Primary%;
+  border-radius: 50%;
 }
 
 .left-nav-container {
@@ -552,19 +560,7 @@ input[disabled] ~ span {
 
 @media(max-width:998px) {
   
-  html:not(.designer) .sidebar-toggle {
-    display: block;
-    padding: 8px 0px 10px 0px;
-    text-align: center;
-    margin: 10px;
-    width: 35px;
-    height: 35px;
-    color: %color:On Background%;
-    background: %color:Primary%;
-    border-radius: 50%;
-  }
-  
-    html:not(.designer) .sidebar-toggle:focus {
+  html:not(.designer) .sidebar-toggle:focus {
     background: linear-gradient(0deg, %color:Dark Overlay 1%, %color:Dark Overlay 1%), %color:Primary%;
   }
   
