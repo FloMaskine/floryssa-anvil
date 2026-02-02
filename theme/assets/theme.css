@@ -542,7 +542,7 @@ input[disabled] ~ span {
 }
 
 .sidebar-toggle {
-  display: none;
+  /* display: none; */
 }
 
 .left-nav-container {
