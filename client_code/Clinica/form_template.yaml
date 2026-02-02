@@ -31,7 +31,8 @@ components:
       type: TextBox
     - layout_properties: {grid_position: 'VPLZIB,PYAVOL'}
       name: drop_down_categoria_clinica
-      properties: {items: [Particular, Clinica]}
+      properties:
+        items: [Particular, Clinica]
       type: DropDown
     - event_bindings: {click: button_add_client_click}
       layout_properties: {grid_position: 'VPLZIB,WVRJNL'}
