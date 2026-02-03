@@ -541,18 +541,7 @@ input[disabled] ~ span {
   display: none;
 }
 
-.sidebar-toggle {
-  display: none;
-}
-
-.left-nav-container {
-  margin: 10px;
-}
-/* Mobile */
-
-@media(max-width:998px) {
-  
-  html:not(.designer) .sidebar-toggle {
+html:not(.designer) .sidebar-toggle {
     display: block;
     padding: 8px 0px 10px 0px;
     text-align: center;
@@ -564,14 +553,7 @@ input[disabled] ~ span {
     border-radius: 50%;
   }
   
-    html:not(.designer) .sidebar-toggle:focus {
-    background: linear-gradient(0deg, %color:Dark Overlay 1%, %color:Dark Overlay 1%), %color:Primary%;
-  }
-  
-  html:not(.designer) .nav-holder {
-    display: block;
-  }
-  html:not(.designer) .nav-holder .left-nav {
+    html:not(.designer) .nav-holder .left-nav {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -583,6 +565,14 @@ input[disabled] ~ span {
 
     display: none;
     transition: right 0.5s;
+  }
+
+html:not(.designer) .sidebar-toggle:focus {
+    background: linear-gradient(0deg, %color:Dark Overlay 1%, %color:Dark Overlay 1%), %color:Primary%;
+  }
+  
+  html:not(.designer) .nav-holder {
+    display: block;
   }
   
   html:not(.designer) .nav-holder .left-nav.shown {
