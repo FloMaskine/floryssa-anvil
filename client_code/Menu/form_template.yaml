@@ -37,7 +37,7 @@ components:
     type: Button
   layout_properties: {slot: left-nav}
   name: menu_panel
-  properties: {col_widths: '{}'}
+  properties: {background: theme:Surface, col_widths: '{}'}
   type: ColumnPanel
 - data_bindings: []
   layout_properties: {slot: logo}
