@@ -148,10 +148,6 @@ components:
   name: menu_1
   properties: {}
   type: form:Menu
-- layout_properties: {slot: top-left-btn}
-  name: menu_2
-  properties: {}
-  type: form:Menu
 container:
   data_bindings: []
   event_bindings: {}
