@@ -24,7 +24,7 @@ class Menu(MenuTemplate):
     #Set the Plotly plots template to match the theme of the app
     Plot.templates.default = "rally"
     #When the app starts up, the PainelPrincipal form will be added to the page
-    self.content_panel.add_component(PainelPrincipal())
+    ##self.content_panel.add_component(PainelPrincipal())
     #Change the color of the painel_principal_menu_link_button to indicate that the PainelPrincipal page has been selected
     self.painel_principal_menu_link_button.background = app.theme_colors['Primary Container']
     
