@@ -40,6 +40,8 @@ components:
   properties: {col_widths: '{}', role: card}
   type: ColumnPanel
 container:
-  properties: {col_widths: '{}'}
-  type: ColumnPanel
+  data_bindings: []
+  event_bindings: {}
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
 is_package: true
