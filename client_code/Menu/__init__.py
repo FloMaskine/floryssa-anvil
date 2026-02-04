@@ -28,8 +28,6 @@ class Menu(MenuTemplate):
       self.content_panel.add_component(form_to_open)
     else:
       self.content_panel.add_component(PainelPrincipal())
-    
-
 
   def historico_geral_menu_link_button_click(self, **event_args):
     """This method is called when the link is clicked"""
