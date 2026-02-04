@@ -25,9 +25,9 @@ class Menu(MenuTemplate):
     Plot.templates.default = "rally"
     #When the app starts up, the PainelPrincipal form will be added to the page
     if form_to_open:
-      self.content_panel.add_component(form_to_open)
+      self.column_panel_1.add_component(form_to_open)
     else:
-      self.content_panel.add_component(PainelPrincipal())
+      self.column_panel_1.add_component(PainelPrincipal())
 
   def historico_geral_menu_link_button_click(self, **event_args):
     """This method is called when the link is clicked"""
