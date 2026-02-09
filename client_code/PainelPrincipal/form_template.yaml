@@ -144,7 +144,6 @@ components:
   name: column_panel_1
   properties: {background: '', border: '', col_spacing: medium, col_widths: '{"XJDGPO":30,"QWVFNP":30}', foreground: '', role: null, spacing_above: none, spacing_below: none, tooltip: '', visible: false, wrap_on: mobile}
   type: ColumnPanel
-
 container:
   data_bindings: []
   event_bindings: {}
