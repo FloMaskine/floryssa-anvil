@@ -29,7 +29,7 @@ class Menu(MenuTemplate):
     
   def reset_links(self):
     self.painel_principal_menu_link_button.background = "transparent"
-    self.clinica_menu_link.background = "transparent"
+    self.clinica_menu_link_button.background = "transparent"
     self.gastos_mes_menu_link_button.background = "transparent"
     self.historico_geral_menu_link_button.background = "transparent"
     self.graficos_gerais_menu_link_button.background = "transparent"
@@ -69,7 +69,7 @@ class Menu(MenuTemplate):
     self.column_panel_1.clear()
     self.column_panel_1.add_component(Clinica())
     self.reset_links()
-    self.clinica_menu_link.background = app.theme_colors['Primary Container']
+    self.clinica_menu_link_button.background = app.theme_colors['Primary Container']
 
   def painel_principal_menu_link_button_click(self, **event_args):
     """This method is called when the button is clicked"""
