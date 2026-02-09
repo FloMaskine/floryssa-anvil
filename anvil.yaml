@@ -276,5 +276,5 @@ services:
       writersCanShare: true
   server_config: {enc_delegation_refresh_token: l9RhDmONuz3W5y+zHPOVxN37ZfuPZ9ifJERaX8Wc0pdVixgp2zbYtrAGnxMSqmAmacIPMkU+DatbRLCbGKqvQVcfqcKGo85ceuOlAdfhDEF50hsss50wSl1k5jA5yg4suZ4nqGEq5+wZlJnpqsYmNAHwsHXD+69X557T8xQGqnxHYNgb8KQyMLE5XZvZOaFlKWmqovy5HKAf2FBLWWerh96obHjMQc2kBZgsLQTmQzkwB2cChhJQvS5uZc92UnDNH46w0pJpnLPEqi0VC7Q9V/Rc2tJq+f+2oXSlQUQOANwOj9kHLdeqI+EaQkaPqQ==}
   source: /runtime/services/google.yml
-startup: {module: PainelPrincipal, type: form}
+startup: {module: Menu, type: form}
 startup_form: null
