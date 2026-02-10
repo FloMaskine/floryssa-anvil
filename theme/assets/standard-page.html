@@ -18,8 +18,7 @@
       <div class="placeholder drop-here" anvil-if-slot-empty="default" anvil-drop-slot="default">Drop a ColumnPanel here.</div>
     </div>
     
-    
-    <!-- <div class="nav-shield"></div> -->
+    <div class="nav-shield"></div>
   </div>
 </div>
 
@@ -30,12 +29,12 @@
   function hideSidebar() {
     ln.animate({left: -ln.outerWidth()}, function() {
       ln.removeClass("in-transition shown").addClass("hidden");
-      // $('.nav-shield').removeClass("shown");
+      $('.nav-shield').removeClass("shown");
       $(window).trigger('resize');
     });
   }
   function showSidebar() {
-    // $('.nav-shield').addClass("shown");
+    $('.nav-shield').addClass("shown");
     ln.addClass("shown").removeClass("hidden").css({left: "-100%"}).css({left: -ln.outerWidth()}).animate({left: 0}, function() {
       ln.removeClass("in-transition");
     });
