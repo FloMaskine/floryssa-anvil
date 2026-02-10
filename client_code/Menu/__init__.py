@@ -36,6 +36,7 @@ class Menu(MenuTemplate):
 
   def historico_geral_menu_link_button_click(self, **event_args):
     """This method is called when the link is clicked"""
+    print("historico_geral_menu_link_button_click triggered")
     #Clear the content panel and add the wanted Form
     self.column_panel_1.clear()
     self.column_panel_1.add_component(Historicos())
@@ -45,6 +46,7 @@ class Menu(MenuTemplate):
 
   def graficos_gerais_menu_link_button_click(self, **event_args):
     """This method is called when the link is clicked"""
+    print("graficos_gerais_menu_link_button_click triggered")
     #Clear the content panel and add the Reports Form
     self.column_panel_1.clear()
     self.column_panel_1.add_component(Graficos())
@@ -54,6 +56,7 @@ class Menu(MenuTemplate):
 
   def gastos_mes_menu_link_button_click(self, **event_args):
     """This method is called when the button is clicked"""
+    print("gastos_mes_menu_link_button_click triggered")
     self.column_panel_1.clear()
     self.column_panel_1.add_component(GastosMes())
     self.reset_links()
@@ -61,11 +64,13 @@ class Menu(MenuTemplate):
 
   def signout_link_click(self, **event_args):
     """This method is called when the link is clicked"""
+    print("signout_link_click triggered")
     anvil.users.logout()
     open_form('Login')
 
   def clinica_menu_link_button_click(self, **event_args):
     """This method is called when the button is clicked"""
+    print("clinica_menu_link_button_click triggered")
     self.column_panel_1.clear()
     self.column_panel_1.add_component(Clinica())
     self.reset_links()
@@ -73,6 +78,7 @@ class Menu(MenuTemplate):
 
   def painel_principal_menu_link_button_click(self, **event_args):
     """This method is called when the button is clicked"""
+    print("painel_principal_menu_link_button_click triggered")
     self.column_panel_1.clear()
     self.column_panel_1.add_component(PainelPrincipal())
     self.reset_links()
