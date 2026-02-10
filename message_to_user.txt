@@ -1,0 +1,1 @@
+I've made a diagnostic change to `theme/assets/standard-page.html`. I've set the `nav-shield` to be transparent and disabled its pointer events. Please refresh your application and check if the menu is now clickable and buttons react to hovering. If it works, we've identified the `nav-shield` as the culprit, and I can then work on a proper fix.
