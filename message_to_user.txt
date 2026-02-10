@@ -1,3 +1,7 @@
-I've added a CSS rule to `theme/assets/theme.css` (`.left-nav .btn, .left-nav a { pointer-events: auto !important; }`) to explicitly enable pointer events on the menu buttons and links. This should override any other rules that might be disabling interaction.
+I've inserted a diagnostic "TEST CLICK" button into `theme/assets/standard-page.html`. It's a bright red button positioned at the top-left of the screen, with a very high z-index.
 
-Please refresh your application and check if the menu is now clickable and buttons react to hovering.
+Please refresh your application and try to click this "TEST CLICK" button.
+*   If you *can* click it and an alert box appears, it means the issue is likely specific to the Anvil menu components, and not a broad overlay blocking the entire area.
+*   If you *cannot* click it, then there's still a broader overlay issue at play, even with a highly-prioritized HTML element.
+
+Please let me know the result.
