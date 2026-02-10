@@ -1,7 +1,7 @@
-I've inserted a diagnostic "TEST CLICK" button into `theme/assets/standard-page.html`. It's a bright red button positioned at the top-left of the screen, with a very high z-index.
+I've modified `client_code/Menu/form_template.yaml`. The "Painel Principal" menu item is now rendered as a `Label` component instead of a `Button`, but it still retains its `click` event binding and styling properties.
 
-Please refresh your application and try to click this "TEST CLICK" button.
-*   If you *can* click it and an alert box appears, it means the issue is likely specific to the Anvil menu components, and not a broad overlay blocking the entire area.
-*   If you *cannot* click it, then there's still a broader overlay issue at play, even with a highly-prioritized HTML element.
+Please refresh your application and try to click the "Painel Principal" menu item.
+*   If you *can* click it, it means there's an issue specific to Anvil's `Button` components that prevents them from being interactive in this context.
+*   If you *cannot* click it, the problem is more general, affecting even `Label` components with click handlers in the menu.
 
 Please let me know the result.
